@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Prueba uno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-button [routerLink]="['/iniciar']" fill="clear">
+      <ion-icon name="chevron-back-outline"></ion-icon>atras
+    </ion-button>
+    <ion-card-header style="text-align: center;">
+      <h1 style="color: black;">Nueva cuenta</h1>
+      <ion-card-subtitle> completa los campos</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Usuario:</ion-label>
+        <ion-input placeholder="Ingresa tu nick" maxlength="8" mixlegth="3"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Correo</ion-label>
+        <ion-input placeholder="Ingresa tu email" type="email"></ion-input>
+      </ion-item>
+
+      <ion-list>
+        <div style="color: black;">
+          <ion-label>selecciona tu carrera</ion-label>
+        </div>
+
+        <ion-item>
+
+          <ion-select>
+            <ion-select-option >Cocina</ion-select-option>
+            <ion-select-option >Informatica</ion-select-option>
+            <ion-select-option >Redes</ion-select-option>
+            <ion-select-option >Administración</ion-select-option>
+            <ion-select-option >otra</ion-select-option>
+
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <ion-item>
+        <ion-label>Contraseña:</ion-label>
+        <ion-input placeholder="Ingresa tu Contraseña"  type="password" mixlegth="4"></ion-input>
+      </ion-item>
+
+
+      <ion-button color="success" [routerLink]="['/iniciar']" (change)="UsuarioRegistrado($event)">Registrar</ion-button>
+      <ion-button color="primary" fill="clear" >Limpiar</ion-button>
+
+    </ion-card-content>
+
+
+
+  </ion-card>
+
+</ion-content>
